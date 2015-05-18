@@ -1,0 +1,55 @@
+.visible-sm {
+    display: block;
+}
+
+.slideshow > .caption {
+    padding: 0 35% 30px 25px;
+}
+
+.slideshow .title, .slideshow .title a {
+    font-size: 36px;
+    line-height: 1.18em;
+}
+
+.slideshow .sub.title {
+    margin-top: 10px;
+    display: block;
+    font-size: 18px;
+    line-height: 1.2em;
+}
+
+#main-header {
+    flex-direction: row;
+}
+
+#search-box input {
+    min-width: 500px;
+}
+
+#sab-voice figure > img {
+    width: 50%;
+    height: 50%;
+}
+
+#sab-history {
+    flex-flow: row;
+}
+
+#quick-links .columns {
+    flex-flow: row;
+}
+
+#quick-links .columns > * {
+    flex-basis: 0;
+    display: block;
+}
+
+#quick-links .columns > * > *:first-child {
+    -webkit-writing-mode: inherit;
+    -webkit-transform: none;
+    margin-right: 0;
+}
+
+#quick-links .columns > * > ul {
+    margin-left: 0;
+}

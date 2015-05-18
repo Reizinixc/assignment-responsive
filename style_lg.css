@@ -1,0 +1,31 @@
+.slideshow .title, .slideshow .title a {
+    margin-top: 35px;
+    font-size: 56px;
+}
+
+#site-header a {
+    width: 345px;
+    height: 76px;
+}
+
+#main-menu a {
+    margin: 0 10px;
+}
+
+#news {
+    flex-direction: row;
+    flex-grow: 2;
+}
+
+#news > * {
+    flex: 1 0 0;
+}
+
+#voice-sab {
+    flex-grow: 1;
+}
+
+#sab-voice figure > img {
+    width: 70%;
+    height: 70%;
+}

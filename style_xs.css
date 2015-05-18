@@ -1,0 +1,494 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, .header {
+    font-family: "PT Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.right.aligned.columns {
+    justify-content: flex-end;
+}
+
+.shrink.columns > * {
+    flex-grow: 0;
+}
+
+.container > *,
+.columns > * {
+    flex-grow: 1;
+}
+
+ul.columns {
+    list-style: none;
+}
+
+.equal.columns > * {
+    flex-basis: 0;
+}
+
+.gutter > * {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.inner.gutter:first-child {
+    margin-left: 0;
+}
+
+.inner.gutter:last-child {
+    margin-right: 0;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.center.text {
+    text-align: center;
+}
+
+.nav-bar {
+    padding: 10px 0;
+}
+
+.blue {
+    background: #0B1526;
+}
+
+.blue * {
+    color: #FFF;
+}
+
+.button {
+    font-size: 14px;
+    border: none;
+    background: #DDD;
+    color: #000;
+    outline: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(0.99);
+    translation: all 1s ease-in;
+}
+
+@keyframes primary-button {
+    0% {
+        background: #DDD;
+    }
+
+    100% {
+        background: #CCC;
+    }
+}
+
+.primary.button {
+    animation: primary-button 0.8s infinite alternate both;
+}
+
+.button:active {
+    background: #CCC;
+}
+
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    vertical-align: middle;
+}
+
+.large.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.big.icon {
+    width: 48px;
+    height: 48px;
+}
+
+.huge.icon {
+    width: 64px;
+    height: 64px;
+}
+
+.gutter.icon {
+    margin: 5px 10px;
+}
+
+.announcement.icon {
+    background-image: url("announce-icon.png");
+}
+
+.news.icon {
+    background-image: url("news-icon.png");
+}
+
+.voice.icon {
+    background-image: url("voice-icon.png");
+}
+
+.right.text {
+    text-align: right;
+}
+
+.visible-sm {
+    display: none;
+}
+
+#main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    background: linear-gradient(to bottom, rgba(11, 21, 38, 1) 5%, rgba(11, 21, 38, 0.95) 25%, rgba(11, 21, 38, 0.7) 80%, rgba(11, 21, 38, 0) 100%);
+    z-index: 999;
+    font-family: "PT Sans", sans-serif;
+}
+
+#main-header + * {
+    padding-top: 120px;
+}
+
+#site-header {
+    display: flex;
+    margin: 0 5px 5px 0;
+}
+
+#site-header a {
+    display: block;
+    text-indent: -10000px;
+    width: 182px;
+    height: 40px;
+    background: url("site-header.png") no-repeat top left;
+    background-size: contain;
+}
+
+#site-header a:hover {
+    transform: scale(1.01);
+    translation: all 1s ease-in;
+}
+
+#site-header a:active {
+    transform: scale(0.99);
+    translation: all 1s ease-in;
+}
+
+#main-menu {
+    align-items: center;
+    margin-right: 10px;
+}
+
+#main-menu a {
+    display: block;
+    text-align: center;
+    align-items: stretch;
+    padding: 7px;
+    color: #FFF;
+    border-bottom: 2px solid transparent;
+}
+
+#main-menu a:hover {
+    border-color: #FFF;
+}
+
+#main-menu a:active {
+    background: rgba(134, 144, 147, 0.4);
+}
+
+.slideshow {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.jumbotron.slideshow {
+    min-height: 300px;
+    max-height: 620px;
+}
+
+.slideshow.ratio-16-9 {
+    padding-bottom: 36.25%;
+}
+
+.slideshow > .caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0 20px 20px 20px;
+    color: #FFF;
+    font-family: "PT Sans", sans-serif;
+    background-image: linear-gradient(to top, rgba(11, 21, 38, 1) 3%, rgba(11, 21, 38, 0.9) 15%, rgba(11, 21, 38, 0.6) 65%, rgba(11, 21, 38, 0) 100%);
+}
+
+.slideshow .title, .slideshow .title a {
+    color: #FFF;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 1.25em;
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 10px #000;
+}
+
+.slideshow .title a:hover {
+    text-decoration: underline;
+}
+
+.slideshow .sub.title {
+    text-shadow: none;
+    display: none;
+}
+
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tiles > * {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 50%;
+    background-size: cover;
+    background-position: center;
+    color: #FFF;
+    font: normal 26px/1.2em "PT Sans", sans-serif;
+    text-shadow: 0 0 10px #000;
+    transition: all 0.1s ease-out;
+    opacity: 0.88;
+}
+
+.tiles > a:hover {
+    opacity: 1;
+}
+
+.tiles.ratio4-3 > * {
+    padding: calc(44% - 26px - 15px) 15px 15px;
+}
+
+body section > h1 {
+    margin: 10px 15px;
+    font-size: 36px;
+}
+
+#search-box {
+    padding: 0 15px 10px 0;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#search-box * {
+    font-family: "PT Sans", sans-serif;
+}
+
+#search-box input {
+    background: #FFF;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    padding: 7px;
+    min-width: 220px;
+}
+
+#articles, #news {
+    display: flex;
+    flex-direction: column;
+}
+
+section .title {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    line-height: 1.2em;
+    font-weight: normal;
+    margin: 20px 0 20px 0;
+}
+
+section .main.title {
+    margin: 20px 10px 15px 20px;
+}
+
+.invert.title {
+    color: #FFF;
+}
+
+#news .list {
+    font-family: 'Calibri Light', Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.38em;
+}
+
+#news .list {
+    display: block;
+    margin: 15px 0 15px 10px;
+    padding: 0;
+    list-style: none;
+}
+
+#news .list > li {
+    padding: 8px;
+}
+
+#news .list > li:not(:last-child) {
+    border-bottom: 1px solid #888;
+}
+
+#sab-voice {
+    display: flex;
+    flex-direction: column;
+}
+
+#sab-voice figure {
+    display: flex;
+    justify-content: center;
+}
+
+#sab-voice figure > img {
+    width: 85%;
+    height: 85%;
+    max-width: 600px;
+    max-height: 338px;
+}
+
+#sab-voice .sub.title,
+#sab-history .sub.title {
+    flex-shrink: 1;
+    margin: 10px auto 15px auto;
+    padding: 0;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+#sab-history {
+    background: #0B1526 url("bg-sab-history.jpg") top left no-repeat;
+    background-size: cover;
+    align-items: flex-start;
+    flex-flow: column;
+    padding: 10px;
+}
+
+#sab-history .sub.title {
+    text-shadow: 0 0 10px #000;
+}
+
+#sab-history ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: chapter -1;
+}
+
+#sab-history li {
+    font-family: Courier, sans-serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+    counter-increment: chapter 1;
+}
+
+#sab-history li:before {
+    content: counter(chapter, decimal-leading-zero);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    min-height: 30px;
+    background: #FFF;
+    border-radius: 100%;
+    margin: 10px;
+    color: #0B1526;
+    z-index: 1;
+}
+
+#sab-history li:not(:last-child)::after {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: #FFF;
+    position: absolute;
+    left: 24px;
+    z-index: 0;
+}
+
+#quick-links .columns {
+    flex-flow: column;
+}
+
+#quick-links .main.title {
+    margin-bottom: 0;
+}
+
+#quick-links ul {
+    font-family: 'Calibri Light', Helvetica, sans-serif;
+    font-size: 17px;
+    list-style: none;
+    padding: 0;
+}
+
+#quick-links li {
+    margin-bottom: 10px;
+}
+
+#quick-links .columns > * {
+    display: flex;
+    flex: 1 0 100%;
+    margin: 0 15px;
+    position: relative;
+}
+
+#quick-links .columns > * > *:first-child {
+    -webkit-writing-mode: vertical-rl;
+    -webkit-transform: rotate(180deg);
+    margin-right: 20px;
+}
+
+#site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Calibri Light', Helvetica, sans-serif;
+    margin: 10px;
+}
