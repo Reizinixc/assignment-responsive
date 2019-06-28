@@ -450,6 +450,7 @@ section .main.title {
     background: #FFF;
     position: absolute;
     left: 24px;
+    top: 50%;
     z-index: 0;
 }
 
